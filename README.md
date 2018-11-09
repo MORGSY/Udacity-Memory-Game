@@ -39,7 +39,7 @@ Each turn:
 
  ## Author
 
-This project was created by **Morgan Nichols** fas part of the Udacity FEND Nanodegree.
+This project was created by **Morgan Nichols** as part of the Udacity FEND Nanodegree.
 
 ## Future Improvements
 * Add media queries to allow the game to be played across all devices
