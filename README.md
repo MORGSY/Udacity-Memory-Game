@@ -37,7 +37,7 @@ Each turn:
     * The user can click the restart button to restart the game.
     * The user can click the modal button to restart the game.
 
-    ### Author
+ ## Author
 
 This project was created by **Morgan Nichols** fas part of the Udacity FEND Nanodegree.
 
