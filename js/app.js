@@ -76,6 +76,7 @@ function getTimeNow() {
     return [hour, minute, second]
 }
 
+//starts the timer
 function startTime() {
     let [hour, minute, second] = getTimeNow();
     document.querySelector('.time').innerHTML = hour + ":" + minute + ":" + second;
@@ -137,7 +138,7 @@ function eventListener(e) { //event listener function
             console.log(document.querySelectorAll('.match').length);
 
             //If all cards match, run this
-            /*if (document.querySelectorAll('.match').length == 16) {
+            if (document.querySelectorAll('.match').length == 16) {
                 console.log("Winner...Winner..Chicken Dinner!")
                 let totalStars = document.querySelectorAll('.fa-star').length;
                 let scoreStar = '';
@@ -150,44 +151,11 @@ function eventListener(e) { //event listener function
                 document.querySelector('.time-result').innerHTML = hour + ":" + minute + ":" + second;
                 document.querySelector('.stars-result').innerHTML = scoreStar;
                 document.querySelector('.win-message').style.display = "inline-block";
-            }*/
+            }
         }
     }
 }
 
-//Create modal
-let modalAppear = function() {
-    if (matchList.length == 16) {
-        clearInterval(startTimer);
-
-        let timing = timer.innerHTML;
-        let starNumber = document.querySelector(".stars").innerHTML;
-
-        document.getElementById("modal-popup").style.display = "block";
-        document.querySelector(".total-moves").innerHTML = counting;
-        document.querySelector(".total-time").innerHTML = timing;
-        document.querySelector(".total-stars").innerHTML = starNumber;
-
-        closeModal();
-    }
-};
-
-//Closes modal when the button is clicked
-function closeModal() {
-    button.addEventListener("click", function() {
-        document.getElementById("modal-popup").style.display = "none";
-        startGame();
-        for (let i = 0; i < stars.length; i++) {
-            stars[i].style.visibility = "visible";
-        }
-
-        min = 0;
-        sec = 0;
-        setInterval(function() {
-            myTimer();
-        }, 1000);
-    });
-}
 
 //initialize the cards
 shuffle(cardList);
