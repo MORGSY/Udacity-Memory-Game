@@ -150,7 +150,7 @@ function eventListener(e) { //event listener function
                 document.querySelector('.moves-result').innerHTML = moves;
                 document.querySelector('.time-result').innerHTML = hour + ":" + minute + ":" + second;
                 document.querySelector('.stars-result').innerHTML = scoreStar;
-                document.querySelector('.win-message').style.display = "inline-block";
+                document.querySelector('.modal').style.display = "block";
             }
         }
     }
